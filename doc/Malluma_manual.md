@@ -26,18 +26,28 @@ sh ./install.sh  --check //check the environemnt if or not ready
 sh ./install.sh  --all //really install process
 </pre>
 
-- **Maybe installing qeustion**
-	- Question 1: 
+- **Maybe installing question**
+- Question 1: 
 <pre>
 Error info:
 cc:error: ../deps/hiredis/libhiredis.a: no such file or directory
 cc:error: ../deps/lua/src/liblua.a: no such file or directory
 cc:error: ../deps/geohash-int/geohash.o: no such file or directory
 ...
-
 Solution:
 cd /usr/local/src/redias/deps
 make geohash-int hiredis jemalloc linenoise lua
+</pre>
+- Question 2:
+<pre>
+When you run the third step "sh ./install.sh --check", maybe has some erros such as "./install.sh:line 475: 4*100+16*10+:syntax error:operand expected (error token is '+')". 
+You could ignore it, this type error would not affect the normal function about the Malluma.
+</pre>
+  - Question 3:
+<pre>
+When you run the fourth step "sh ./install.sh --all", if you select all default choice, maybe you would not normally use the Malluma when input the ip in the browser. 
+Maybe the cause is that the installation directory is the child about the installation package's directory.
+The suggest is when you run the fourth step, it would ask "Default software directory name...[Y/N]", you should say "N" to input the installation directory. Then you try it again. Good luck to you.
 </pre>
 
 <h2 id="3">User guide</h2>
